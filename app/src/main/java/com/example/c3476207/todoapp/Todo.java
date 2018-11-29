@@ -11,6 +11,7 @@ public class Todo {
     // Answer: ___
     private UUID mId;
     private String mTitle;
+    private String mDetail;
     private Date mDate;
     private boolean mIsComplete;
 
@@ -22,35 +23,45 @@ public class Todo {
     }
 
     // Right clicked the attributes to create getter and setter methods.
-    public UUID getmId() {
+    // But removed the m for the automatically generated methods
+    public UUID getId() {
         return mId;
     }
 
-    public void setmId(UUID mId) {
+    public void setId(UUID mId) {
         this.mId = mId;
     }
 
-    public String getmTitle() {
+    public String getTitle() {
         return mTitle;
     }
 
-    public void setmTitle(String mTitle) {
+    public void setTitle(String mTitle) {
         this.mTitle = mTitle;
     }
 
-    public Date getmDate() {
+    // Missed the detail attribute the first time through, woops!
+    public String getDetail() {
+        return mDetail;
+    }
+
+    public void setDetail(String mDetail) {
+        this.mDetail = mDetail;
+    }
+
+    public Date getDate() {
         return mDate;
     }
 
-    public void setmDate(Date mDate) {
+    public void setDate(Date mDate) {
         this.mDate = mDate;
     }
 
-    public boolean ismIsComplete() {
+    public boolean isIsComplete() {
         return mIsComplete;
     }
 
-    public void setmIsComplete(boolean mIsComplete) {
+    public void setIsComplete(boolean mIsComplete) {
         this.mIsComplete = mIsComplete;
     }
 }
