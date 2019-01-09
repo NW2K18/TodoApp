@@ -4,7 +4,7 @@ import android.content.Context;
 import java.util.ArrayList;
 
 // This class is the model, what is a model in MVC terms?
-// Answer: ___
+// Answer: The attributes.
 public class TodoModel {
 
     // Class creates an instance of itself, why?
