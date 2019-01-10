@@ -14,7 +14,7 @@ public class TodoActivity extends AppCompatActivity {
     public static final String EXTRA_TODO_ID = "todo_id";
 
     // This is an intent
-    // What is a context? Answer: ___
+    // What is a context? Answer: Respresents the state of the application running
     // Puts an extra which is a key-value pair
     // Creates an intent within the intent to return it
     public static Intent newIntent (Context packageContext, UUID todoId) {
@@ -27,7 +27,7 @@ public class TodoActivity extends AppCompatActivity {
     // by grabbing the ID of the to-do
     protected Fragment createFragment() {
         UUID todoId = (UUID) getIntent().getSerializableExtra(EXTRA_TODO_ID);
-        return TodoFragment.newInstance(todoID);
+        return TodoFragment.newInstance(todoId);
     }
 
     // This is the onCreate method that sets layout.
