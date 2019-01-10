@@ -2,6 +2,7 @@ package com.example.c3476207.todoapp;
 
 import android.content.Context;
 import java.util.ArrayList;
+import java.util.UUID;
 
 // This class is the model, what is a model in MVC terms?
 // Answer: The attributes.
@@ -42,5 +43,32 @@ public class TodoModel {
             // Adds this to-do to the list.
             mTodoList.add(todo);
         }
+    }
+
+    public Todo getTodo (UUID todoID) {
+
+        // This is a getter method to return the section of the To-do list
+        // that corresponds to the ID: the index for the to-do array
+        // This loop goes along the array
+        // For each index of to-do, checks if the current ID corresponds to the index
+        // When it does, it returns the to-do
+        for (Todo todo : mTodoList) {
+            if (todo.getId().equals(todoID)) {
+                return todo;
+            }
+        }
+
+        // Returns null at the end, because it already returned the to-do earlier
+        return null;
+    }
+
+    // This method just returns the list, which is the array
+    public ArrayList<Todo> getTodos() {
+        return mTodoList;
+    }
+
+    // Method used for adding a new to-do onto the list
+    public void addTodo (Todo todo) {
+        mTodoList.add(todo);
     }
 }
