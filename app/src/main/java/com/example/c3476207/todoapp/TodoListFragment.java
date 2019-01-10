@@ -22,7 +22,6 @@ public class TodoListFragment extends Fragment{
     private RecyclerView mTodoRecyclerView;
 
     // OnCreate method
-    @Override
     public void OnCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
